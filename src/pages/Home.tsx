@@ -8,14 +8,14 @@ import { blogPosts } from "../data/blog";
 import { Link } from "react-router-dom";
 
 // Add this interface at the top of the file, after the imports
-interface BlogPost {
-  title: string;
-  date: string;
-  excerpt: string;
-  content: string;
-  image?: string;
-  tags?: string[];
-}
+// interface BlogPost {
+//   title: string;
+//   date: string;
+//   excerpt: string;
+//   content: string;
+//   image?: string;
+//   tags?: string[];
+// }
 
 const Home = () => (
   <Layout>
