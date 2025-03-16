@@ -5,9 +5,8 @@ import { blogPosts } from "../data/blog";
 import Layout from "../components/Layout";
 
 const BlogPost = () => {
-  const { id } = useParams();
-  const post = blogPosts.find((p) => p.id === id);
-  console.log(post);
+  const { id }: any = useParams();
+  const post: any = blogPosts.find((p:any) => p.id === id);
 
   if (!post) return <div>Post not found</div>;
 
@@ -60,7 +59,7 @@ const BlogPost = () => {
 
           {/* Content */}
           <div className="prose prose-invert max-w-none">
-            {post.content.map((section, index) => {
+            {post.content.map((section: any, index: any) => {
               switch (section.type) {
                 case "paragraph":
                   return (
@@ -103,8 +102,8 @@ const BlogPost = () => {
             <div className="mt-12 pt-8 border-t border-gray-800">
               <h2 className="text-2xl font-bold mb-6">Related Articles</h2>
               <div className="grid sm:grid-cols-2 gap-6">
-                {post.relatedPosts.map((relatedId) => {
-                  const relatedPost = blogPosts.find((p) => p.id === relatedId);
+                {post.relatedPosts.map((relatedId: any) => {
+                  const relatedPost:any = blogPosts.find((p:any) => p.id === relatedId);
                   if (!relatedPost) return null;
                   return (
                     <Link

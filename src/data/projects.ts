@@ -1,6 +1,10 @@
 export interface Project {
+  stats: any;
   title: string;
   description: string;
+  categories: string[],
+  tech: string[],
+  liveUrl: string,
   image: string;
   technologies: string[];
   github?: string;

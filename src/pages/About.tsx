@@ -239,40 +239,7 @@ const About = () => {
 
                   {/* Positions */}
                   <div className="space-y-4 sm:space-y-6 pl-12 sm:pl-16">
-                    {experience.positions ? (
-                      experience.positions.map((position, idx) => (
-                        <div
-                          key={idx}
-                          className="relative pb-4 sm:pb-6 last:pb-0"
-                        >
-                          <div className="relative">
-                            <div className="absolute -left-[1.65rem] top-2 w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-blue-500" />
-                            <h4 className="text-base sm:text-lg font-medium">
-                              {position.title}
-                            </h4>
-                            <p className="text-xs sm:text-sm text-gray-400 mt-1">
-                              {position.period}
-                            </p>
-                            <p className="text-sm sm:text-base text-gray-300 mt-2 sm:mt-3 line-clamp-3 sm:line-clamp-none">
-                              {position.description}
-                            </p>
-                            {position.skills && (
-                              <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-3 sm:mt-4">
-                                {position.skills.map((skill) => (
-                                  <span
-                                    key={skill}
-                                    className="px-2 sm:px-3 py-0.5 sm:py-1 text-xs sm:text-sm rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20"
-                                  >
-                                    {skill}
-                                  </span>
-                                ))}
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      ))
-                    ) : (
-                      // Single position
+                      {/*  Single position */}
                       <div className="relative">
                         <div className="absolute -left-[1.65rem] top-2 w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-blue-500" />
                         <h4 className="text-base sm:text-lg font-medium">
@@ -295,7 +262,6 @@ const About = () => {
                           ))}
                         </div>
                       </div>
-                    )}
                   </div>
                 </div>
               </motion.div>

@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Home from "./pages/Home";
@@ -10,7 +10,7 @@ import NotFound from "./pages/NotFound";
 import Blogs from "./pages/Blogs";
 
 // Lazy loaded components
-const BlogPost = lazy(() => import('./pages/BlogPost'));
+// const BlogPost = lazy(() => import('./pages/BlogPost'));
 
 // ScrollToTop component
 const ScrollToTop = () => {

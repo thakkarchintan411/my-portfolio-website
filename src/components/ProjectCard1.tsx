@@ -144,7 +144,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 {/* Project Stats */}
                 {project.stats && (
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-gray-800">
-                    {Object.entries(project.stats).map(([key, value]) => (
+                    {Object.entries(project.stats).map(([key, value]:any) => (
                       <div key={key} className="text-center">
                         <div className="text-2xl font-bold text-blue-400">{value}</div>
                         <div className="text-sm text-gray-400">{key}</div>
