@@ -1,0 +1,117 @@
+/* Import external fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define font styles */
+:root {
+  font-family: "Reddit Mono";
+}
+
+body {
+  font-family: var(--font-sans);
+  transition: background-color 1.5s ease, color 1.5s ease;
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/* Enhanced Scrollbar Styles */
+/* Width and base styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Track styles */
+::-webkit-scrollbar-track {
+  background: rgba(30, 30, 30, 0.4);
+  border-radius: 3px;
+  margin: 4px 0;
+}
+
+/* Handle styles with gradient */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    rgba(59, 130, 246, 0.8), /* blue-500 */
+    rgba(139, 92, 246, 0.8)  /* violet-500 */
+  );
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Handle hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(59, 130, 246, 1), /* blue-500 */
+    rgba(139, 92, 246, 1)  /* violet-500 */
+  );
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+/* Handle active effect */
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(
+    to bottom,
+    rgba(37, 99, 235, 1), /* blue-600 */
+    rgba(124, 58, 237, 1)  /* violet-600 */
+  );
+}
+
+/* Corner styles */
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox scrollbar styles */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(139, 92, 246, 0.8) rgba(30, 30, 30, 0.4);
+}
+
+/* Animation keyframes */
+@keyframes gradient-rotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Optional: Add smooth scrolling to the page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Hide scrollbar but keep functionality */
+@media (max-width: 640px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+}
